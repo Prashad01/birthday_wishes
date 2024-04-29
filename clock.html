@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Timer</h1>
+
+<script>
+    function setCountdown() {
+  const countdownTime = localStorage.getItem("setCountdownTime");
+  
+  if (!countdownTime || countdownTime <= 0) {
+    alert("No countdown time set.");
+    return;
+  }
+}
+    function updateClock() {
+        const now = new Date();
+        const currentTime = now.getTime();
+        const targetTimeValue = targetTime.getTime();
+  
+        document.getElementById('clock').innerText = `Current Time: ${now.toLocaleString()}`;
+  
+        if (currentTime >= targetTimeValue) {
+          redirectToAnotherPage();
+        }
+      }
+  
+      function redirectToAnotherPage() {
+        // Replace 'target-page.html' with the path to your desired page
+        window.location.href = 'main.html';
+      }
+    </script>
+</body>
+</html>
